@@ -5,7 +5,8 @@ public class Unjumble {
     {
         String jumbled = "ehunoeiftogrtihge";
         ArrayList<Integer> list1 = new ArrayList<>();
-
+        
+        //Eight has unique character g, so while g is found, the first instance of each letter in "eight" is removed and 8 is added to the arraylist
         while(jumbled.indexOf("g") != -1)
         {
             jumbled = jumbled.substring(0,jumbled.indexOf("g")) + jumbled.substring(jumbled.indexOf("g")+1);
@@ -15,6 +16,9 @@ public class Unjumble {
             jumbled = jumbled.substring(0,jumbled.indexOf("t")) + jumbled.substring(jumbled.indexOf("t")+1);
             list1.add(8);
         }
+        
+        //After removing all eights, h becomes unique to three, so while h is found, the first instance of each letter in "three" is removed and 
+        //3 is added to the arraylist
         while(jumbled.indexOf("h") != -1)
         {
             jumbled = jumbled.substring(0,jumbled.indexOf("h")) + jumbled.substring(jumbled.indexOf("h")+1);
@@ -24,6 +28,8 @@ public class Unjumble {
             jumbled = jumbled.substring(0,jumbled.indexOf("e")) + jumbled.substring(jumbled.indexOf("e")+1);
             list1.add(3);
         }
+        
+        //This continues for numbers 0-9. The order matters because some characters are not unique until other numbers have been removed.
         while(jumbled.indexOf("u") != -1)
         {
             jumbled = jumbled.substring(0,jumbled.indexOf("u")) + jumbled.substring(jumbled.indexOf("u")+1);
@@ -86,7 +92,8 @@ public class Unjumble {
             jumbled = jumbled.substring(0,jumbled.indexOf("e")) + jumbled.substring(jumbled.indexOf("e")+1);
             list1.add(9);
         }
-
+        
+        //the arraylist is sorted in incremental order and each element of the arraylist is printed.
         Collections.sort(list1);
         for(int i = 0; i < list1.size(); i++)
         {
