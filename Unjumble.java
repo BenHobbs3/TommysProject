@@ -3,6 +3,7 @@ import java.util.Collections;
 public class Unjumble {
     public static void main(String[] args)
     {
+        //This example has "eighteightfourone" jumbled and should return 1488
         String jumbled = "ehunoeiftogrtihge";
         ArrayList<Integer> list1 = new ArrayList<>();
         
