@@ -1,3 +1,0 @@
-idea A
-idea B
-idea C
